@@ -1,8 +1,5 @@
 image: docker:19.03.0
 
-services:
-  - docker:19.03.0-dind
-
 stages:
   - build
 
@@ -16,12 +13,12 @@ before_script:
 Build:
   stage: build
   script:
-    - docker pull $CI_REGISTRY_IMAGE:basic
+#    - docker pull $CI_REGISTRY_IMAGE:basic
     - >
       docker build
       --pull
       --build-arg VCS_URL=$CI_PROJECT_URL
-      --cache-from $CI_REGISTRY_IMAGE:basic
+#      --cache-from $CI_REGISTRY_IMAGE:basic
       --file=./Dockerfile-basic
       --tag $CI_REGISTRY_IMAGE:basic
       .
