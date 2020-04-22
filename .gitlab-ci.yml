@@ -21,6 +21,6 @@ Build:
       --pull
       --build-arg VCS_URL=$CI_PROJECT_URL
       --file=./Dockerfile-basic
-      --tag $CI_REGISTRY_IMAGE:basic
+      --tag $CI_REGISTRY_IMAGE:basic74
       .
     - docker push $CI_REGISTRY_IMAGE:basic
