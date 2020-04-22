@@ -23,4 +23,4 @@ Build:
       --file=./Dockerfile-basic
       --tag $CI_REGISTRY_IMAGE:basic74
       .
-    - docker push $CI_REGISTRY_IMAGE:basic
+    - docker push $CI_REGISTRY_IMAGE:basic74
