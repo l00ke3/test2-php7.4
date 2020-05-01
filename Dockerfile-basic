@@ -64,11 +64,3 @@ RUN echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 WORKDIR /app
-
-
-
-
-
-
-
-
