@@ -19,6 +19,7 @@ RUN apt-get install -y \
             libmemcachedutil2 \
             build-essential \
             libmemcached-dev \
+            mariadb-client \
             gnupg2 \
             libpq-dev \
             libz-dev
