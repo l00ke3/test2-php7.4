@@ -22,13 +22,8 @@ RUN apt-get install -y \
             mariadb-client \
             gnupg2 \
             libpq-dev \
-            libz-dev
-
-RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main 11' > /etc/apt/sources.list.d/pgdg.list
-
-RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
-
-RUN apt-get update && apt-get install -y postgresql-client-11
+            libz-dev \
+            postgresql-client-11
 
 RUN docker-php-ext-configure gd \
     --with-webp=/usr/include/ \
