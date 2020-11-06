@@ -23,7 +23,11 @@ RUN apt-get install -y \
             libpq-dev \
             gnupg2 \
             libpq5 \
-            libz-dev
+            libz-dev \
+            nano \
+            && apt-get -y autoremove \
+            && apt-get -y clean \
+            && rm -rf /var/lib/apt/lists/* /tmp/* /var/cache/*
 
 RUN docker-php-ext-configure gd \
     --with-webp-dir=/usr/include/ \
