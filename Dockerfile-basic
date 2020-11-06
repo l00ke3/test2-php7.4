@@ -55,6 +55,8 @@ RUN pecl install xdebug
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer self-update
+
 RUN pecl install memcached
 
 RUN echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini
