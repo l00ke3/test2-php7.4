@@ -1,3 +1,4 @@
 #!/bin/bash
+printenv | grep -v "no_proxy" >> /etc/environment
 crontab ./crontab
 cron -l 2 -f
