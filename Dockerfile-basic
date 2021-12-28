@@ -66,4 +66,5 @@ RUN apt-get -y autoremove \
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+COPY ./cron_entry_point ./cron_entry_point
 WORKDIR /app
